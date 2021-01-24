@@ -1,14 +1,18 @@
 import { Sandwich } from "./sandwich";
 
 class SandwichCatalog {
-  private static instance: boolean;
+  private static instance: SandwichCatalog;
   private list: Sandwich[] = [];
 
-  constructor(...args: Sandwich[]) {
-    if (!SandwichCatalog.instance) {
-      this.list = args;
-      SandwichCatalog.instance = true;
-    }
+  private constructor(sandwiches: Sandwich[]) {
+    this.list = sandwiches;
+  }
+
+  static getInstance(...args: Sandwich[]) {
+    if (this.instance) return this.instance;
+
+    this.instance = new SandwichCatalog(args);
+    return this.instance;
   }
 
   get getCatalog() {
