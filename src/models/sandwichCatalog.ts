@@ -1,6 +1,6 @@
 import { Sandwich } from "./sandwich";
 
-class SandwichCatalog {
+export class SandwichCatalog {
   private static instance: SandwichCatalog;
   private list: Sandwich[] = [];
 

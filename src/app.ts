@@ -1,34 +1,70 @@
 import {
-  ISandwich,
+  Breads,
   Meats,
   Cheeses,
   Toppings,
   Condiments,
-} from "./utils/sandwichDefs";
+  Sizes,
+  Sandwich,
+} from "./models/sandwich";
 
-const s1: ISandwich = {
-  bread: "Whole Wheat",
-  meats: [Meats.SALAMI],
-  cheeses: [Cheeses.CHEDDAR],
-  toppings: [Toppings.LETTUCE, Toppings.TOMATO],
-  condiments: [Condiments.OIL_VINEGAR, Condiments.MAYO],
-  vegetarian: false,
-  size: "Whole",
-  breadOut: false,
-  price: 10,
-};
+import { SandwichCatalog } from "./models/sandwichCatalog";
 
-const s2: ISandwich = {
-  bread: "White",
-  meats: [Meats.HAM],
-  cheeses: [Cheeses.CHEDDAR],
-  toppings: [Toppings.LETTUCE, Toppings.TOMATO, Toppings.ONION],
-  condiments: [Condiments.MUSTARD],
-  vegetarian: false,
-  size: "Whole",
-  breadOut: false,
-  price: 10,
-};
+const s1 = new Sandwich(
+  "Bootlegger",
+  Breads.WHITE,
+  [Meats.ROAST_BEEF],
+  [Cheeses.CHEDDAR],
+  [Toppings.LETTUCE, Toppings.TOMATO],
+  [Condiments.OIL_VINEGAR, Condiments.MAYO],
+  Sizes.WHOLE,
+  10,
+  false,
+  false,
+  false
+);
 
-const sandwichShop: ISandwich[] = [s1, s2];
-console.log(sandwichShop);
+const s2 = new Sandwich(
+  "All-american",
+  Breads.WHITE,
+  [Meats.TURKEY],
+  [Cheeses.CHEDDAR],
+  [Toppings.LETTUCE, Toppings.TOMATO],
+  [Condiments.OIL_VINEGAR, Condiments.MAYO],
+  Sizes.WHOLE,
+  10,
+  false,
+  false,
+  false
+);
+
+const s3 = new Sandwich(
+  "Italian",
+  Breads.WHITE,
+  [Meats.SALAMI],
+  [Cheeses.CHEDDAR],
+  [Toppings.LETTUCE, Toppings.TOMATO],
+  [Condiments.OIL_VINEGAR, Condiments.MAYO],
+  Sizes.WHOLE,
+  10,
+  false,
+  false,
+  false
+);
+
+const s4 = new Sandwich(
+  "TEST",
+  Breads.WHITE,
+  [Meats.SALAMI],
+  [Cheeses.CHEDDAR],
+  [Toppings.LETTUCE, Toppings.TOMATO],
+  [Condiments.OIL_VINEGAR, Condiments.MAYO],
+  Sizes.WHOLE,
+  10,
+  false,
+  false,
+  false
+);
+
+const sc = SandwichCatalog.getInstance(s1, s2, s3);
+console.log(sc);
