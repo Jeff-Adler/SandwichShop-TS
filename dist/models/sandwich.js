@@ -9,12 +9,12 @@ var Breads;
 })(Breads = exports.Breads || (exports.Breads = {}));
 var Meats;
 (function (Meats) {
-    Meats[Meats["SALAMI"] = 0] = "SALAMI";
-    Meats[Meats["TURKEY"] = 1] = "TURKEY";
-    Meats[Meats["ROAST_BEEF"] = 2] = "ROAST_BEEF";
-    Meats[Meats["HAM"] = 3] = "HAM";
-    Meats[Meats["PASTRAMI"] = 4] = "PASTRAMI";
-    Meats[Meats["CHICKEN"] = 5] = "CHICKEN";
+    Meats["SALAMI"] = "salami";
+    Meats["TURKEY"] = "turkey";
+    Meats["ROAST_BEEF"] = "roast beef";
+    Meats["HAM"] = "ham";
+    Meats["PASTRAMI"] = "pastrami";
+    Meats["CHICKEN"] = "chicken";
 })(Meats = exports.Meats || (exports.Meats = {}));
 var Cheeses;
 (function (Cheeses) {
@@ -57,17 +57,20 @@ class Sandwich {
         this.vegetarian = vegetarian;
         this.vegan = vegan;
     }
-    get getBread() {
-        return this.bread;
-    }
-    set setBread(b) {
-        this.bread = b;
-    }
     get isVegetarian() {
         return this.vegetarian;
     }
     get isVegan() {
         return this.vegan;
+    }
+    get getMeats() {
+        const meats = this.getIterableItem(this.meats);
+        return meats;
+    }
+    getIterableItem(items) {
+        return items.map((item) => {
+            return console.log(item);
+        });
     }
 }
 exports.Sandwich = Sandwich;

@@ -19,12 +19,12 @@ export enum Breads {
 }
 
 export enum Meats {
-  SALAMI,
-  TURKEY,
-  ROAST_BEEF,
-  HAM,
-  PASTRAMI,
-  CHICKEN,
+  SALAMI = "salami",
+  TURKEY = "turkey",
+  ROAST_BEEF = "roast beef",
+  HAM = "ham",
+  PASTRAMI = "pastrami",
+  CHICKEN = "chicken",
 }
 
 export enum Cheeses {
@@ -69,19 +69,24 @@ export class Sandwich implements ISandwich {
     public vegan: boolean = false
   ) {}
 
-  get getBread() {
-    return this.bread;
-  }
-
-  set setBread(b: Breads) {
-    this.bread = b;
-  }
-
   get isVegetarian() {
     return this.vegetarian;
   }
 
   get isVegan() {
     return this.vegan;
+  }
+
+  get getMeats() {
+    const meats = this.getIterableItem(this.meats);
+    return meats;
+  }
+
+  private getIterableItem<T extends Meats | Cheeses | Toppings | Condiments>(
+    items: Array<T>
+  ) {
+    return items.map((item: T) => {
+      return console.log(item);
+    });
   }
 }

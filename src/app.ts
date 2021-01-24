@@ -13,7 +13,7 @@ import { SandwichCatalog } from "./models/sandwichCatalog";
 const s1 = new Sandwich(
   "Bootlegger",
   Breads.WHITE,
-  [Meats.ROAST_BEEF],
+  [Meats.ROAST_BEEF, Meats.TURKEY],
   [Cheeses.CHEDDAR],
   [Toppings.LETTUCE, Toppings.TOMATO],
   [Condiments.OIL_VINEGAR, Condiments.MAYO],
@@ -67,4 +67,5 @@ const s4 = new Sandwich(
 );
 
 const sc = SandwichCatalog.getInstance(s1, s2, s3);
-console.log(sc);
+
+console.log(s1);
