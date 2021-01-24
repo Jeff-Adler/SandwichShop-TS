@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Condiments = exports.Toppings = exports.Cheeses = exports.Meats = void 0;
+exports.Condiments = exports.Toppings = exports.Cheeses = exports.Meats = exports.Breads = void 0;
+var Breads;
+(function (Breads) {
+    Breads[Breads["WHITE"] = 0] = "WHITE";
+    Breads[Breads["WHOLE_WHEAT"] = 1] = "WHOLE_WHEAT";
+    Breads[Breads["WRAP"] = 2] = "WRAP";
+})(Breads = exports.Breads || (exports.Breads = {}));
 var Meats;
 (function (Meats) {
     Meats[Meats["SALAMI"] = 0] = "SALAMI";

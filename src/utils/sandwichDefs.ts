@@ -1,14 +1,21 @@
 export interface ISandwich {
-  bread: string;
+  name: string;
+  bread: Breads;
   meats: Meats[];
   cheeses: Cheeses[];
   toppings: Toppings[];
   condiments: Condiments[];
+  size: Sizes;
+  price: number;
+  breadOut?: boolean;
   vegetarian?: boolean;
   vegan?: boolean;
-  size: string;
-  breadOut?: boolean;
-  price: number;
+}
+
+export enum Breads {
+  WHITE,
+  WHOLE_WHEAT,
+  WRAP,
 }
 
 export enum Meats {
@@ -40,4 +47,9 @@ export enum Condiments {
   OIL_VINEGAR,
   MAYO,
   MUSTARD,
+}
+
+export enum Sizes {
+  WHOLE,
+  HALF,
 }
