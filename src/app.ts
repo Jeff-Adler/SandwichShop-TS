@@ -69,3 +69,5 @@ const s4 = new Sandwich(
 const sc = SandwichCatalog.getInstance(s1, s2, s3);
 
 console.log(s1);
+console.log(sc);
+
