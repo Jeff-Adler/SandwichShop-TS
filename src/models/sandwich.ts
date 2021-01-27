@@ -12,6 +12,7 @@ export interface ISandwich {
   vegan?: boolean;
 }
 
+// Add values for every pointer for all enum
 export enum Breads {
   WHITE,
   WHOLE_WHEAT,
