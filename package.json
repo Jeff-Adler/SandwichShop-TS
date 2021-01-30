@@ -1,7 +1,7 @@
 {
   "name": "sandwich_shop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple sandwich shop to practice TS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
