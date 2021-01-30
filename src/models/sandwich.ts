@@ -14,9 +14,9 @@ export interface ISandwich {
 
 // Add values for every pointer for all enum
 export enum Breads {
-  WHITE,
-  WHOLE_WHEAT,
-  WRAP,
+  WHITE = "white",
+  WHOLE_WHEAT = "whole wheat",
+  WRAP = "wrap",
 }
 
 export enum Meats {
@@ -29,30 +29,30 @@ export enum Meats {
 }
 
 export enum Cheeses {
-  PROVOLONE,
-  CHEDDAR,
-  PEPPER_JACK,
-  AMERICAN,
-  SWISS,
-  MOZZARELLA,
+  PROVOLONE = "provolone",
+  CHEDDAR = "cheddar",
+  PEPPER_JACK = "pepper jack",
+  AMERICAN = "american",
+  SWISS = "swiss",
+  MOZZARELLA = "mozzarella",
 }
 
 export enum Toppings {
-  LETTUCE,
-  TOMATO,
-  ONION,
-  PEPPERS,
+  LETTUCE = "lettuce",
+  TOMATO = "tomato",
+  ONION = "onion",
+  PEPPERS = "peppers",
 }
 
 export enum Condiments {
-  OIL_VINEGAR,
-  MAYO,
-  MUSTARD,
+  OIL_VINEGAR = "oil and vinegar",
+  MAYO = "mayonnaise",
+  MUSTARD = "mustard",
 }
 
 export enum Sizes {
-  WHOLE,
-  HALF,
+  WHOLE = "whole",
+  HALF = "half",
 }
 
 export class Sandwich implements ISandwich {
