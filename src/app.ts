@@ -66,7 +66,7 @@ const s4 = new Sandwich(
   false
 );
 
-const sc = SandwichCatalog.getInstance(s1, s2, s3);
+const sc = SandwichCatalog.getInstance(s1, s2, s3, s4);
 
 console.log(s1);
 console.log(sc);
